@@ -65,7 +65,7 @@ public class Main {
 
         SimpleDataSource dataSource = new SimpleDataSource();
         if ("1".equals(dbType)) {
-            dataSource.setJdbcUrl("jdbc:mysql://" + ip + ":" + port + "/" + dbName);
+            dataSource.setJdbcUrl("jdbc:mysql://" + ip + ":" + port + "/" + dbName + "?verifyServerCertificate=false&useSSL=false");
         } else if ("2".equals(dbType)) {
             dataSource.setJdbcUrl("jdbc:oracle:thin:@" + ip + ":" + port + ":" + serviceName);
         } else if ("3".equals(dbType)) {
